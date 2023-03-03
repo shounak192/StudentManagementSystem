@@ -1,13 +1,15 @@
 package com.org.studentmanagementsystem.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 
 @Entity
 public class Admin {
-	
+
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String username;
 	private String password;
@@ -47,7 +49,5 @@ public class Admin {
 	public String toString() {
 		return "Admin [id=" + id + ", username=" + username + ", password=" + password + "]";
 	}
-	
-	
 
 }
