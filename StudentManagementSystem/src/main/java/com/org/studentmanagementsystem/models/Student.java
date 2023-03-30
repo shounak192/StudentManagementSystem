@@ -10,17 +10,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-
 @Entity
 public class Student {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String username;
 	private String password;
 
-	@OneToMany(fetch= FetchType.LAZY, cascade= CascadeType.ALL, mappedBy = "student")
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "student")
 	private List<Course> courseList;
 
 	private Student(Integer id, String username, String password, List<Course> courseList) {

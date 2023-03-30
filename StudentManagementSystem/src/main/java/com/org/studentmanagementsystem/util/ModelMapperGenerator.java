@@ -10,7 +10,7 @@ public class ModelMapperGenerator {
 		
 	}
 	
-	public ModelMapper getMapper() {
+	public static ModelMapper getMapper() {
 		
 		if(mapper==null)
 			return new ModelMapper();

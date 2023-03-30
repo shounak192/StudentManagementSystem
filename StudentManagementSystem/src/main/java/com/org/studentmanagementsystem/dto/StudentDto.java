@@ -5,7 +5,7 @@ public class StudentDto {
 	private Integer id;
 	private String username;
 	private String password;
-	
+
 	private StudentDto(Integer id, String username, String password) {
 		super();
 		this.id = id;
@@ -41,6 +41,5 @@ public class StudentDto {
 	public String toString() {
 		return "StudentDto [id=" + id + ", username=" + username + ", password=" + password + "]";
 	}
-	
-	
+
 }
