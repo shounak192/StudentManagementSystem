@@ -28,24 +28,27 @@ public class Admin {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public Admin setId(Integer id) {
 		this.id = id;
+		return this;
 	}
 
 	public String getUsername() {
 		return username;
 	}
 
-	public void setUsername(String username) {
+	public Admin setUsername(String username) {
 		this.username = username;
+		return this;
 	}
 
 	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
+	public Admin setPassword(String password) {
 		this.password = password;
+		return this;
 	}
 
 	@Override
