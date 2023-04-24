@@ -17,6 +17,9 @@ public class Course {
 	@ManyToOne(targetEntity = Student.class)
 	private Student student;
 
+	public Course() {
+	}
+
 	private Course(Integer id, String name, Student student) {
 		super();
 		this.id = id;
