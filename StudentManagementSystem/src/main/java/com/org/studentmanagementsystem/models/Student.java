@@ -22,7 +22,10 @@ public class Student {
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "student")
 	private List<Course> courseList;
 
-	private Student(Integer id, String username, String password, List<Course> courseList) {
+	public Student() {
+	}
+
+	public Student(Integer id, String username, String password, List<Course> courseList) {
 		super();
 		this.id = id;
 		this.username = username;

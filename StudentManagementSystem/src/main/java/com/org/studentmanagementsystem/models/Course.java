@@ -20,7 +20,7 @@ public class Course {
 	public Course() {
 	}
 
-	private Course(Integer id, String name, Student student) {
+	public Course(Integer id, String name, Student student) {
 		super();
 		this.id = id;
 		this.name = name;
