@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.org.studentmanagementsystem.models.Course;
 import com.org.studentmanagementsystem.models.Student;
 
 @Service
@@ -19,10 +20,10 @@ public interface IStudentService {
 	
 	public Student delete(Integer id);
 	
-	public Student enrollCourse(Integer studentId, Integer courseId);
+	public Course enrollCourse(Integer studentId, Integer courseId);
 	
-	public Student discardCourse(Integer studentId, Integer courseId);
+	public Course discardCourse(Integer studentId, Integer courseId);
 	
-	public List<Student> viewAllStudentsByCourse(Integer courseId);
+	public List<Course> viewAllCourseByStudent(Integer studentId);
 
 }

@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Course {
 
@@ -15,6 +17,7 @@ public class Course {
 	private String name;
 
 	@ManyToOne(targetEntity = Student.class)
+	@JsonBackReference
 	private Student student;
 
 	public Course() {
@@ -42,6 +45,15 @@ public class Course {
 
 	public Course setName(String name) {
 		this.name = name;
+		return this;
+	}
+	
+	public Student getStudent() {
+		return student;
+	}
+
+	public Course setStudent(Student student) {
+		this.student = student;
 		return this;
 	}
 

@@ -11,5 +11,7 @@ import com.org.studentmanagementsystem.models.Student;
 public interface IStudentRepository extends JpaRepository<Student, Integer>{
 	
 	Optional<Student> findByUsername(String username);
+	
+	
 
 }
